@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ControlX.Models;
+using DocsMarshal.Entities;
 using DocsMarshal.Entities.Interfaces;
 using DocsMarshal.Interfaces;
 
@@ -41,6 +42,31 @@ namespace ControlX.Services
         public override Task<IEnumerable<Contatto>> GetLastItemsUpdatesAsync(DateTime? lastUpdate)
         {
             throw new NotImplementedException();
+        }
+
+
+
+        internal override ProfileForInsert FromEntityToProfileForInsert(Contatto model, bool raiseWorkflowEvents)
+        {
+            var insert = model.ToProfileForInsert(raiseWorkflowEvents);
+
+            insert.Fields.Add(new FieldValueString("Nome", model.Nome));
+            insert.Fields.Add(new FieldValueString("Telefono", model.Telefono));
+            insert.Fields.Add(new FieldValueString("Email", model.Email));
+            insert.Fields.Add(new FieldValueString("Cognome", model.Cognome));
+            insert.Fields.Add(new FieldValueBoolean("OkPubblicita", model.OkPubb));
+            insert.Fields.Add(new FieldValueBoolean("OkAlertOffTaglio", model.OkAlertOffTaglio));
+            insert.Fields.Add(new FieldValueString("UserName", model.UserName));
+            insert.Fields.Add(new FieldValueString("Cellulare", model.Cellulare));
+            insert.Fields.Add(new FieldValueBoolean("OkInvioAvvisi", model.OkInvioAvvisi));
+            insert.Fields.Add(new FieldValueString("QrCodeRegistrazione", model.QrCodeRegistrazione));
+            insert.Fields.Add(new FieldValueDateTime("QrCodescadenza", model.QrCodeScadenza,""));
+            insert.Fields.Add(new FieldValueString("NotePubbliche", model.NotePubbliche));
+            insert.Fields.Add(new FieldValueString("NotePrivate", model.NotePrivate));
+            insert.Fields.Add(new FieldValueString("Sesso", model.Sesso));
+            insert.Fields.Add(new FieldValueDateTime("dtnascita", model.DataNascita, ""));
+            insert.Fields.Add(new FieldValueString("password", model.Password));
+            return insert;
         }
     }
 }

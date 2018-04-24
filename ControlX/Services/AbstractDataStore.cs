@@ -30,6 +30,27 @@ namespace ControlX.Services
 
         public abstract T Filler(IProfile profile);
 
+        public virtual async  Task<DocsMarshal.Entities.ProfileInserted> Insert(T model, bool raiseWorkflowEvents)
+        {
+            try
+            {
+                var profileForInsert = FromEntityToProfileForInsert(model, raiseWorkflowEvents);
+                var inserted = await Manager.Profile.Archive.Insert(profileForInsert);
+                return inserted;
+            }
+            catch (Exception ex)
+            {
+               
+                var rit = new DocsMarshal.Entities.ProfileInserted(null);
+                rit.HasError = true;
+                rit.Error = ex.Message;
+                return rit;
+            }
+        }
+
+        internal abstract DocsMarshal.Entities.ProfileForInsert FromEntityToProfileForInsert(T model, bool raiseWorkflowEvents);
+
+
 
         public async System.Threading.Tasks.Task<T> GetItemAsync(Guid objectId)
         {

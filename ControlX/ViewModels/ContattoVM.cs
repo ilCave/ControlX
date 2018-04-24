@@ -25,9 +25,31 @@ namespace ControlX.ViewModels
             throw new NotImplementedException();
         }
 
-        private void OnInsertCommand(object obj)
+        private async void OnInsertCommand(object obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                IsRunning = true;
+                var ritorno = await Orchestrator.Contatti.Insert(Item, true);
+                if (ritorno.HasError)
+                    throw new Exception(ritorno.Error);
+                else
+                {
+                    // navigo nell'elenco dei contatti
+                    CurPage.Navigation.PushAsync(new Views.ElencoContattiV());
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Error = ex.Message;
+                CurPage.DisplayAlert(CurPage.Title, Error, "Ok");
+            }
+            finally
+            {
+                IsRunning = false;
+            }
+
         }
 
         private void OnEditCommand(object obj)

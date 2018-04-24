@@ -9,6 +9,7 @@ namespace ControlX.Models
         public Contatto()
         {
             PropertyChanged += MyLocalPropertyChanged;
+            ClassTypeExternalId = "Clienti";
         }
 
         private void MyLocalPropertyChanged(object sender, PropertyChangedEventArgs e)
