@@ -36,6 +36,13 @@ namespace ControlX.ViewModels
         {
             ForceRefreshCommand = new Command(OnForceRefreshCommand);
             PropertyChanged += OnLocalPropertyChanged;
+            AddCommand = new Command(OnAddCommand);
+
+        }
+
+        private void OnAddCommand(object obj)
+        {
+            Navigation.PushAsync(new Views.ContattoEditV());
         }
 
         private void OnLocalPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -59,6 +66,7 @@ namespace ControlX.ViewModels
 
         public bool ForceRefresh=false;
         public ICommand ForceRefreshCommand { get; set; }
+        public ICommand AddCommand { get; set; }
 
 
         public Models.Contatto SelectedItem

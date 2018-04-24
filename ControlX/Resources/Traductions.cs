@@ -9,6 +9,8 @@ namespace ControlX.Resources
 
 
 
+        public string StrNome { get { return GetCurvalueLang(_StrNome); } }
+        public string StrCognome { get { return GetCurvalueLang(_StrCognome); } }
         public string BtnEdit { get { return GetCurvalueLang(_BtnEdit); } }
         public string StrUserName { get { return GetCurvalueLang(_StrUserName); } }
         public string StrPassword { get { return GetCurvalueLang(_StrPassword); } }
@@ -32,6 +34,16 @@ namespace ControlX.Resources
         public string StrOkInvioAvvisi { get { return GetCurvalueLang(_StrOkInvioAvvisi); } }
 
 
+        Dictionary<string, string> _StrNome = new Dictionary<string, string>
+        {
+            {"IT",  "Nome"},
+            {"EN",  "Name"}
+        };
+        Dictionary<string, string> _StrCognome = new Dictionary<string, string>
+        {
+            {"IT",  "Cognome"},
+            {"EN",  "Surname"}
+        };
         Dictionary<string, string> _BtnEdit = new Dictionary<string, string>
         {
             {"IT",  "Modifica"},

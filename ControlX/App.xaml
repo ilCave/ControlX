@@ -24,7 +24,7 @@
                 <On Platform="iOS" Value="20" />
             </OnPlatform>
             
-            <Color x:Key="Primary">Red</Color>
+            <Color x:Key="Primary">#e52229</Color>
             <Color x:Key="PrimaryDark">#1976D2</Color>
             <Color x:Key="Accent">#96d1ff</Color>
             <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
@@ -39,7 +39,7 @@
             </Style>
             
             <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
-                <Setter Property="BackgroundColor" Value="Red" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
             </Style>
 
             <Style TargetType="Picker" ApplyToDerivedTypes="true">
@@ -124,11 +124,8 @@
                 <Setter Property="BackgroundColor" Value="#FFFFFF" />
                 <Setter Property="PlaceholderColor" Value="#ff9999" />
             </Style>
-            
-           
-
             <Style  TargetType="Button">
-                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
                 <Setter Property="WidthRequest" Value="100" />
                 <Setter Property="BorderRadius" Value="{StaticResource BorderRadius}" />
                 <Setter Property="BackgroundColor" Value="#FFFFFF" />
@@ -143,6 +140,10 @@
             <CControls:CualevaRoundedEntry x:Key="CualevaRoundedEntry" />
             <CualevaStandardConverters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
             <CualevaStandardConverters:UpperCaseConverter x:Key="UpperCaseConverter" />
+            <CualevaStandardConverters:GuidEmptyToBooleanConverter x:Key="GuidEmptyToBooleanConverter" />
+            <CualevaStandardConverters:GuidEmptyToBooleanConverter x:Key="InverseGuidEmptyToBooleanConverter" />
+
+            
             <CualevaStandardConverters:StringNotEmptyToBooleanConverter x:Key="StringNotEmptyToBooleanConverter" />
         </ResourceDictionary>
     </Application.Resources>

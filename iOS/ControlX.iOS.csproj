@@ -173,6 +173,9 @@
     <BundleResource Include="Resources\Logo.png" />
     <BundleResource Include="Resources\Cerca.png" />
     <BundleResource Include="Resources\contatti_30.png" />
+    <BundleResource Include="Resources\Logo_ControlX.png" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\Sfondo.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

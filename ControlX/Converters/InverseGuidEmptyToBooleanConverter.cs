@@ -3,20 +3,20 @@ using Xamarin.Forms;
 
 namespace ControlX.Converters
 {
-    public class InverseBooleanConverter : IValueConverter
+    public class InverseGuidEmptyToBooleanConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter,
             System.Globalization.CultureInfo culture)
         {
-            if (targetType != typeof(bool))
-                throw new InvalidOperationException("The target must be a boolean");
-            return !(bool)value;
+            if (targetType != typeof(Guid))
+                throw new InvalidOperationException("The target must be a guid");
+            return Guid.Equals((Guid)value, Guid.Empty);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter,
             System.Globalization.CultureInfo culture)
         {
-            return Convert(value, targetType, parameter, culture);
+            throw new NotSupportedException();
         }
     }
 }

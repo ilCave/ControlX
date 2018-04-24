@@ -1,5 +1,21 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ControlX.Views.ContattoEditV">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+ xmlns:CControls="clr-namespace:ControlX.Controls"
+             x:Class="ControlX.Views.ContattoEditV">
+   <ContentPage.ToolbarItems>
+        <CControls:BindableToolbarItem x:Name="TIEdit" IsVisible="{Binding Item.Objectid, Converter={StaticResource GuidEmptyToBooleanConverter}}" Text="Edit" Command="{Binding EditCommand}" />
+        <CControls:BindableToolbarItem x:Name="TIInsert" IsVisible="{Binding IsVisible, Source={x:Reference TIEdit}, Converter={StaticResource InverseBooleanConverter }}"  Text="Insert" Command="{Binding InsertCommand}" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
+        <ScrollView>
+        <StackLayout BackgroundColor="White" Margin="5">
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrCognome}"  />
+        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Cognome}" Placeholder="{Binding StrCognome}" />
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrNome}"  />
+        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Nome}" Placeholder="{Binding StrNome}" />
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrNotePrivate}"  />
+        <Editor  Text="{Binding Item.NotePrivate}"/>
+        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

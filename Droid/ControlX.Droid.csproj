@@ -168,6 +168,9 @@
     <AndroidResource Include="Resources\drawable\Password.png" />
     <AndroidResource Include="Resources\drawable\UserName.png" />
     <AndroidResource Include="Resources\drawable\contatti_30.png" />
+    <AndroidResource Include="Resources\drawable\Logo_ControlX.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\drawable\Sfondo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistence\" />

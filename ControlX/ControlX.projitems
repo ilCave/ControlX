@@ -43,6 +43,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ContattoEditV.xaml.cs">
       <DependentUpon>ContattoEditV.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\BindableToolbarItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\GuidEmptyToBooleanConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\InverseGuidEmptyToBooleanConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
