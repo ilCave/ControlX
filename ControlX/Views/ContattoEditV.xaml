@@ -15,7 +15,7 @@
         <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Nome}" Placeholder="{Binding StrNome}" />
         <Label Style="{StaticResource Capitoletto}" Text="{Binding StrDataNascita}"  />
         <DatePicker VerticalOptions="CenterAndExpand" Date="{Binding Item.DataNascitaV}" >
-            <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>            
+            <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>            
         </DatePicker>
         <Label Style="{StaticResource Capitoletto}" Text="{Binding StrSesso}"  />
         <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Sesso}" Placeholder="{Binding StrSesso}" />
