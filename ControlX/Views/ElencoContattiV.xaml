@@ -3,7 +3,7 @@
  xmlns:CControls="clr-namespace:ControlX.Controls"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ControlX.Views.ElencoContattiV">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Insert" Command="{Binding AddCommand}" />
+        <ToolbarItem Text="{Binding StrInsert}" Command="{Binding AddCommand}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>

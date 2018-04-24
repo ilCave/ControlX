@@ -8,7 +8,8 @@ namespace ControlX.Resources
     {
 
 
-
+        public string StrInsert { get { return GetCurvalueLang(_StrInsert); } }
+        public string StrUpdate { get { return GetCurvalueLang(_StrUpdate); } }
         public string StrNome { get { return GetCurvalueLang(_StrNome); } }
         public string StrCognome { get { return GetCurvalueLang(_StrCognome); } }
         public string BtnEdit { get { return GetCurvalueLang(_BtnEdit); } }
@@ -33,7 +34,15 @@ namespace ControlX.Resources
         public string StrCellulare { get { return GetCurvalueLang(_StrCellulare); } }
         public string StrOkInvioAvvisi { get { return GetCurvalueLang(_StrOkInvioAvvisi); } }
 
-
+        Dictionary<string, string> _StrInsert = new Dictionary<string, string>
+        {
+            {"IT",  "Inserisci"},
+            {"EN",  "Insert"}
+        };Dictionary<string, string> _StrUpdate = new Dictionary<string, string>
+        {
+            {"IT",  "Modifica"},
+            {"EN",  "Update"}
+        };
         Dictionary<string, string> _StrNome = new Dictionary<string, string>
         {
             {"IT",  "Nome"},

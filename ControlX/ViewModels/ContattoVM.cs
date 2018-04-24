@@ -32,6 +32,7 @@ namespace ControlX.ViewModels
 
         private void OnEditCommand(object obj)
         {
+            
             Navigation.PushAsync(new Views.ContattoEditV(Item));
         }
 

@@ -68,6 +68,16 @@ namespace ControlX.Models
         public DateTime? DataNascita { get; set; }
         public string Cellulare { get; set; }
         public bool OkInvioAvvisi { get; set; }
+        public DateTime DataNascitaV 
+        {
+            get
+            {
+                if (DataNascita.HasValue)
+                    return DataNascita.Value;
+                else
+                    return DateTime.Today;
+            }
+        }
 
         [Ignore]
         public string NomeECognome
