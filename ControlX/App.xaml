@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ControlX.App"
+             xmlns:CualevaStandardConverters="clr-namespace:ControlX.Converters"
+             xmlns:CControls="clr-namespace:ControlX.Controls"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+             <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+                <On Platform="Android" Value="fonts/Montserrat-Bold.ttf#Montserrat Bold" />
+                <On Platform="iOS" Value="Montserrat-Bold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="MediumFont">
+                <On Platform="Android" Value="fonts/Montserrat-Medium.ttf#Montserrat Medium" />
+                <On Platform="iOS" Value="Montserrat-Bold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="NormalFont">
+                <On Platform="Android" Value="fonts/Montserrat-Regular.ttf#Montserrat Regular" />
+                <On Platform="iOS" Value="Montserrat-Regular" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:Int32" x:Key="BorderRadius">
+                <On Platform="Android" Value="10" />
+                <On Platform="iOS" Value="20" />
+            </OnPlatform>
+            
+            <Color x:Key="Primary">Red</Color>
+            <Color x:Key="PrimaryDark">#1976D2</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
+            <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
+            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="#EAEAEA" />
+            </Style>
+            
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="Red" />
+            </Style>
+
+            <Style TargetType="Picker" ApplyToDerivedTypes="true">
+                <Setter Property="BackgroundColor" Value="#FFFFFF" />
+                <Setter Property="HeightRequest" Value="45" />
+            </Style>
+        
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+        
+            <Style x:Key="Titolo" TargetType="Label">
+                <Setter Property="TextColor" Value="#004899" />
+                <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+            </Style>
+            
+            <Style x:Key="Descrizione" TargetType="Label">
+                <Setter Property="TextColor" Value="Gray" />
+                <Setter Property="FontSize" Value="13" /> 
+            </Style>
+
+            <Style x:Key="SottoTitolo" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="8" /> 
+            </Style>
+            <Style x:Key="Capitoletto" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+                <Setter Property="FontSize" Value="10" /> 
+                <Setter Property="Margin" Value="5" /> 
+            </Style>
+
+
+            <Style x:Key="SottoTitoloRosso" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+                <Setter Property="FontSize" Value="9" /> 
+            </Style>
+            
+            <Style x:Key="Link" TargetType="Label">
+                <Setter Property="TextColor" Value="#004899" />
+                <Setter Property="FontSize" Value="15" /> 
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="#FFFFFF" />
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+                <Setter Property="BackgroundColor" Value="#60A5D1" />
+            </Style>
+         
+
+            <Style TargetType="CControls:CualevaRoundedEntry">
+                <Setter Property="TextColor" Value="#FFFFFF" />
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+            <Style x:Key="WhiteEntry" TargetType="CControls:CualevaRoundedEntry">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="MinimumHeightRequest" Value="40" />
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+                <Setter Property="CualevaRoundedEntryBackgroundColor" Value="#FFFFFF" />
+            </Style>
+            <Style x:Key="cerca" TargetType="CControls:CualevaRoundedEntry">
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="Image" Value="Cerca" />
+                <Setter Property="CualevaRoundedEntryBackgroundColor" Value="White" />
+                <Setter Property="LeftPadding" Value="5" />
+            </Style>
+            <Style x:Key="email" TargetType="CControls:CualevaRoundedEntry">
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Image" Value="UserName" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="PlaceholderColor" Value="#ff9999" />
+                
+                <Setter Property="BackgroundColor" Value="#FFFFFF" />
+            </Style>
+            <Style x:Key="psw" TargetType="CControls:CualevaRoundedEntry"> 
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Image" Value="Password" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#FFFFFF" />
+                <Setter Property="PlaceholderColor" Value="#ff9999" />
+            </Style>
+            
+           
+
+            <Style  TargetType="Button">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="BorderRadius" Value="{StaticResource BorderRadius}" />
+                <Setter Property="BackgroundColor" Value="#FFFFFF" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+            </Style>
+            <Style TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="#FFFFFF" />
+            </Style>
+            <CControls:CualevaRoundedEntry x:Key="CualevaRoundedEntry" />
+            <CualevaStandardConverters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+            <CualevaStandardConverters:UpperCaseConverter x:Key="UpperCaseConverter" />
+            <CualevaStandardConverters:StringNotEmptyToBooleanConverter x:Key="StringNotEmptyToBooleanConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

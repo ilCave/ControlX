@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{876EBEB1-9EE7-466A-87EE-E12F5E85353D}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ControlX</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AbstractDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IControlXOrchestrator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contatto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\ISqlLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ContattiDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ControlXOrchestrator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\WelcomeV.xaml.cs">
+      <DependentUpon>WelcomeV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\WelcomeVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ElencoContattiVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ElencoContattiV.xaml.cs">
+      <DependentUpon>ElencoContattiV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Traductions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CualevaPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CualevaRoundedEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\InverseBooleanConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\UpperCaseConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LogOnToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContattoV.xaml.cs">
+      <DependentUpon>ContattoV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContattoVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringNotEmptyToBooleanConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContattoEditV.xaml.cs">
+      <DependentUpon>ContattoEditV.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\WelcomeV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ElencoContattiV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ContattoV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ContattoEditV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Persistence\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ControlX.Views.ContattoV">
+     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{Binding BtnEdit}" Command="{Binding EditCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Margin="5" BackgroundColor="White">
+           <Label Style="{StaticResource Capitoletto}" Text="{Binding StrNomeECognome}"  />
+           <Label TextColor="Black"  Text="{Binding Item.NomeECognome}"  />     
+           <Button IsVisible="{Binding Item.Telefono, Converter={StaticResource StringNotEmptyToBooleanConverter}}" BackgroundColor="Red" TextColor="White" Image="contatti_30.png" HorizontalOptions="Fill" Text="{Binding Item.Telefono}" Clicked="TelClicked" Margin="40,5,40,5" />
+           <Button IsVisible="{Binding Item.Cellulare, Converter={StaticResource StringNotEmptyToBooleanConverter}}" BackgroundColor="Red" TextColor="White" Image="contatti_30.png" HorizontalOptions="Fill" Text="{Binding Item.Cellulare}" Clicked="CelClicked" Margin="40,5,40,5" />
+           <Label IsVisible="{Binding Item.Email, Converter={StaticResource StringNotEmptyToBooleanConverter}}" Style="{StaticResource Capitoletto}" Text="{Binding StrEmail}"  />
+           <Label IsVisible="{Binding Item.Email, Converter={StaticResource StringNotEmptyToBooleanConverter}}" TextColor="Black"  Text="{Binding Item.Email}"  />     
+            <Label IsVisible="{Binding Item.NotePubbliche, Converter={StaticResource StringNotEmptyToBooleanConverter}}" Style="{StaticResource Capitoletto}" Text="{Binding StrNotePubbliche}"  />
+           <Label IsVisible="{Binding Item.NotePubbliche, Converter={StaticResource StringNotEmptyToBooleanConverter}}" TextColor="Black"  Text="{Binding Item.NotePubbliche}"  />     
+           <Label IsVisible="{Binding Item.NotePrivate, Converter={StaticResource StringNotEmptyToBooleanConverter}}" Style="{StaticResource Capitoletto}" Text="{Binding StrNotePrivate}"  />
+           <Label IsVisible="{Binding Item.NotePrivate, Converter={StaticResource StringNotEmptyToBooleanConverter}}"  TextColor="Black"  Text="{Binding Item.NotePrivate}"  />     
+        </StackLayout>
+            </ScrollView>
+        </ContentPage.Content>
+</ContentPage>

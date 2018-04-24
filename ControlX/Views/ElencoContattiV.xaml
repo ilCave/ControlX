@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+ xmlns:CControls="clr-namespace:ControlX.Controls"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ControlX.Views.ElencoContattiV">
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator IsVisible="{Binding IsRunning}" IsRunning="{Binding IsRunning}" Color="{StaticResource Primary}" />
+            <ListView SelectedItem="{Binding SelectedItem}" IsRefreshing="{Binding IsRunning}"  x:Name="ElencoContattiList" ItemsSource="{Binding Items}" IsPullToRefreshEnabled="true" RefreshAllowed="true" RefreshCommand="{Binding ForceRefreshCommand}" >
+            <ListView.Header>
+                    <StackLayout BackgroundColor="{StaticResource Primary}" >
+                            <CControls:CualevaRoundedEntry Margin="5" CualevaRoundedEntryBackgroundColor="White" PlaceholderColor="Red" HeightRequest="50"  
+                                               VerticalOptions="Center" Style="{StaticResource cerca}" 
+                                           Grid.Row="1"  TextColor="{StaticResource Primary}"   
+                                           Placeholder="{Binding StrCercaContatto}" Text="{Binding Filtro}"  />                   
+                    </StackLayout>
+                
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding NomeECognome}" Detail="{Binding Telefoni}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Label HorizontalTextAlignment="Center" Style="{StaticResource SottoTitoloRosso}" Text="{Binding NumeroElementi}" />
+                </ListView.Footer>
+        </ListView>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
