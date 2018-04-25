@@ -8,6 +8,8 @@ namespace ControlX.Resources
     {
 
 
+
+        public string StrLingua { get { return GetCurvalueLang(_StrLingua); } }
         public string StrInsert { get { return GetCurvalueLang(_StrInsert); } }
         public string StrUpdate { get { return GetCurvalueLang(_StrUpdate); } }
         public string StrNome { get { return GetCurvalueLang(_StrNome); } }
@@ -33,12 +35,56 @@ namespace ControlX.Resources
         public string StrDataNascita { get { return GetCurvalueLang(_StrDataNascita); } }
         public string StrCellulare { get { return GetCurvalueLang(_StrCellulare); } }
         public string StrOkInvioAvvisi { get { return GetCurvalueLang(_StrOkInvioAvvisi); } }
+        public string strSelezionaLinguaCliente { get { return GetCurvalueLang(_strSelezionaLinguaCliente); } }
+
+        public string strConfermaEliminazioneContatto { get { return GetCurvalueLang(_strConfermaEliminazioneContatto); } }
+        public string strConferma { get { return GetCurvalueLang(_strConferma); } }
+        public string StrAnnulla { get { return GetCurvalueLang(_strAnnulla); } }
+        public string StrDelete { get { return GetCurvalueLang(_strDelete); } }
+
+        Dictionary<string, string> _strDelete = new Dictionary<string, string>
+        {
+            {"IT",  "Elimina cliente"},
+            {"EN",  "Delete"}
+        };
+
+        Dictionary<string, string> _strConfermaEliminazioneContatto = new Dictionary<string, string>
+        {
+            {"IT",  "Confermi l'eliminazione del contatto?"},
+            {"EN",  "Do you want to delete current contact?"}
+        };
+        Dictionary<string, string> _strConferma = new Dictionary<string, string>
+        {
+            {"IT",  "Confermo"},
+            {"EN",  "Confirm"}
+        };
+        Dictionary<string, string> _strAnnulla = new Dictionary<string, string>
+        {
+            {"IT",  "Annulla"},
+            {"EN",  "Cancel"}
+        };
+
+
+        Dictionary<string, string> _strSelezionaLinguaCliente = new Dictionary<string, string>
+        {
+            {"IT",  "Lingua parlata dal cliente"},
+            {"EN",  "Language of your customer"}
+        };
+
+        Dictionary<string, string> _StrLingua = new Dictionary<string, string>
+        {
+            {"IT",  "Lingua"},
+            {"EN",  "Language"}
+        };
+
 
         Dictionary<string, string> _StrInsert = new Dictionary<string, string>
         {
             {"IT",  "Inserisci"},
             {"EN",  "Insert"}
-        };Dictionary<string, string> _StrUpdate = new Dictionary<string, string>
+        };
+
+        Dictionary<string, string> _StrUpdate = new Dictionary<string, string>
         {
             {"IT",  "Modifica"},
             {"EN",  "Update"}

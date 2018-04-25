@@ -46,6 +46,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\BindableToolbarItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\GuidEmptyToBooleanConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\InverseGuidEmptyToBooleanConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ChiaveValore.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />

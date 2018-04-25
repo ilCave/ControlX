@@ -14,11 +14,12 @@
                 <RowDefinition Height="150" />
             </Grid.RowDefinitions>
             <Image Margin="10" Grid.Row="0" Source="Logo.png" VerticalOptions="Center" HorizontalOptions="Center" />
-            <CControls:CualevaRoundedEntry  Grid.Row="1" IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" BackgroundColor="Transparent"  Style="{StaticResource email}" LeftPadding="10"  BorderRadius="10" HeightRequest="50" 
+            <CControls:CualevaRoundedEntry ImageWidth="10" ImageHeight="10"  Grid.Row="1" IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" BackgroundColor="Transparent"  Style="{StaticResource email}" LeftPadding="40"  BorderRadius="10" HeightRequest="50" 
                                            CualevaRoundedEntryBackgroundColor="#FFFFFF"  x:Name="UserName"  Placeholder="{Binding StrUserName}" 
                                            Text="{Binding UserName}" />
-            <CControls:CualevaRoundedEntry Grid.Row="2" HorizontalOptions="Fill" IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" BackgroundColor="Transparent"  
-                                           Style="{StaticResource psw}" LeftPadding="10" BorderRadius="10" HeightRequest="50" CualevaRoundedEntryBackgroundColor="#FFFFFF"   x:Name="Password" 
+            <CControls:CualevaRoundedEntry Grid.Row="2" HorizontalOptions="Fill" IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" 
+                                           BackgroundColor="Transparent"  
+                                           Style="{StaticResource psw}"  HeightRequest="50" CualevaRoundedEntryBackgroundColor="#FFFFFF"   x:Name="Password" 
                                            Placeholder="{Binding StrPassword}" IsPassword="true" Text="{Binding Password}" />
             <Button IsVisible="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" Text="{Binding StrAccedi}" HorizontalOptions="Center" Grid.Row="3" Command="{Binding LoginCommand}" />
             <ActivityIndicator Grid.Row="3" IsRunning="{Binding IsRunning}" Color="White" IsVisible="{Binding IsRunning}" />

@@ -3,8 +3,8 @@
  xmlns:CControls="clr-namespace:ControlX.Controls"
              x:Class="ControlX.Views.ContattoEditV">
    <ContentPage.ToolbarItems>
-        <CControls:BindableToolbarItem x:Name="TIEdit" IsVisible="{Binding Item.Objectid, Converter={StaticResource GuidEmptyToBooleanConverter}}" Text="{Binding StrUpdate}" Command="{Binding EditCommand}" />
-        <CControls:BindableToolbarItem x:Name="TIInsert" IsVisible="{Binding IsVisible, Source={x:Reference TIEdit}, Converter={StaticResource InverseBooleanConverter }}"  Text="{Binding StrInsert}" Command="{Binding InsertCommand}" />
+        <CControls:BindableToolbarItem x:Name="TIEdit" IsVisible="{Binding IsInsert, Converter={StaticResource InverseBooleanConverter}}" Text="{Binding StrUpdate}" Command="{Binding UpdateCommand}" />
+        <CControls:BindableToolbarItem x:Name="TIInsert" IsVisible="{Binding IsInsert}"  Text="{Binding StrInsert}" Command="{Binding InsertCommand}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
@@ -13,18 +13,26 @@
         <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Cognome}" Placeholder="{Binding StrCognome}" />
         <Label Style="{StaticResource Capitoletto}" Text="{Binding StrNome}"  />
         <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Nome}" Placeholder="{Binding StrNome}" />
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrCellulare}"  />
+        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Telefono}" Placeholder="{Binding StrCellulare}" />
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrTelefono}"  />
+        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Cellulare}" Placeholder="{Binding StrTelefono}" />
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrNotePrivate}"  />
+        <Editor HeightRequest="300"  Text="{Binding Item.NotePrivate}"/>
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrSesso}"  />
+        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Sesso}" Placeholder="{Binding StrSesso}" />        
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrEmail}"  />
+        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Email}" Placeholder="{Binding StrEmail}" />
+        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrLingua}"  />
+        <Picker ItemsSource="{Binding Lingue}" ItemDisplayBinding="{Binding Valore}" Title="{Binding StrLingua}" x:Name="PickerLingua" SelectedIndexChanged="Handle_SelectedIndexChanged" />
+            
         <Label Style="{StaticResource Capitoletto}" Text="{Binding StrDataNascita}"  />
         <DatePicker VerticalOptions="CenterAndExpand" Date="{Binding Item.DataNascitaV}" >
             <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>            
         </DatePicker>
-        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrSesso}"  />
-        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Sesso}" Placeholder="{Binding StrSesso}" />
-        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrEmail}"  />
-        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Email}" Placeholder="{Binding StrEmail}" />
-        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrCellulare}"  />
-        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Telefono}" Placeholder="{Binding StrCellulare}" />
-        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrTelefono}"  />
-        <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.Telefono}" Placeholder="{Binding StrTelefono}" />
+
+
+
         <Label Style="{StaticResource Capitoletto}" Text="{Binding StrUserName}"  />
         <CControls:CualevaRoundedEntry Style="{StaticResource WhiteEntry}" Text="{Binding Item.UserName}" Placeholder="{Binding StrUserName}" />
        
@@ -34,8 +42,7 @@
                 
         <Label Style="{StaticResource Capitoletto}" Text="{Binding StrOkInvioAvvisi}"  />
                 
-        <Label Style="{StaticResource Capitoletto}" Text="{Binding StrNotePrivate}"  />
-        <Editor  Text="{Binding Item.NotePrivate}"/>
+        
         <Label Style="{StaticResource Capitoletto}" Text="{Binding StrNotePubbliche}"  />
         <Editor  Text="{Binding Item.NotePubbliche}"/>
         </StackLayout>

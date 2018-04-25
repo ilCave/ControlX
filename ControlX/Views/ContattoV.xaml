@@ -7,17 +7,19 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout Margin="5" BackgroundColor="White">
+        <StackLayout IsEnabled="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" Margin="5" BackgroundColor="White">
+           <ActivityIndicator Color="{StaticResource Primary}" IsRunning="{Binding IsRunning}" IsVisible="{Binding IsRunning}" />
            <Label Style="{StaticResource Capitoletto}" Text="{Binding StrNomeECognome}"  />
            <Label TextColor="Black"  Text="{Binding Item.NomeECognome}"  />     
-           <Button IsVisible="{Binding Item.Telefono, Converter={StaticResource StringNotEmptyToBooleanConverter}}" BackgroundColor="Red" TextColor="White" Image="contatti_30.png" HorizontalOptions="Fill" Text="{Binding Item.Telefono}" Clicked="TelClicked" Margin="40,5,40,5" />
-           <Button IsVisible="{Binding Item.Cellulare, Converter={StaticResource StringNotEmptyToBooleanConverter}}" BackgroundColor="Red" TextColor="White" Image="contatti_30.png" HorizontalOptions="Fill" Text="{Binding Item.Cellulare}" Clicked="CelClicked" Margin="40,5,40,5" />
+           <Button IsVisible="{Binding Item.Telefono, Converter={StaticResource StringNotEmptyToBooleanConverter}}" BackgroundColor="Lime" TextColor="White" Image="contatti_30.png" HorizontalOptions="Fill" Text="{Binding Item.Telefono}" Clicked="TelClicked" Margin="40,5,40,5" />
+           <Button IsVisible="{Binding Item.Cellulare, Converter={StaticResource StringNotEmptyToBooleanConverter}}" BackgroundColor="Lime" TextColor="White" Image="contatti_30.png" HorizontalOptions="Fill" Text="{Binding Item.Cellulare}" Clicked="CelClicked" Margin="40,5,40,5" />
            <Label IsVisible="{Binding Item.Email, Converter={StaticResource StringNotEmptyToBooleanConverter}}" Style="{StaticResource Capitoletto}" Text="{Binding StrEmail}"  />
            <Label IsVisible="{Binding Item.Email, Converter={StaticResource StringNotEmptyToBooleanConverter}}" TextColor="Black"  Text="{Binding Item.Email}"  />     
             <Label IsVisible="{Binding Item.NotePubbliche, Converter={StaticResource StringNotEmptyToBooleanConverter}}" Style="{StaticResource Capitoletto}" Text="{Binding StrNotePubbliche}"  />
            <Label IsVisible="{Binding Item.NotePubbliche, Converter={StaticResource StringNotEmptyToBooleanConverter}}" TextColor="Black"  Text="{Binding Item.NotePubbliche}"  />     
            <Label IsVisible="{Binding Item.NotePrivate, Converter={StaticResource StringNotEmptyToBooleanConverter}}" Style="{StaticResource Capitoletto}" Text="{Binding StrNotePrivate}"  />
            <Label IsVisible="{Binding Item.NotePrivate, Converter={StaticResource StringNotEmptyToBooleanConverter}}"  TextColor="Black"  Text="{Binding Item.NotePrivate}"  />     
+           <Button BackgroundColor="{StaticResource Primary}" TextColor="White"  HorizontalOptions="Fill" Text="{Binding StrDelete}" Command="{Binding DeleteCommand}"  Margin="40,5,40,5" />
         </StackLayout>
             </ScrollView>
         </ContentPage.Content>

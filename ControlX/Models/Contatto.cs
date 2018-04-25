@@ -10,6 +10,7 @@ namespace ControlX.Models
         {
             PropertyChanged += MyLocalPropertyChanged;
             ClassTypeExternalId = "Clienti";
+            LanguageCode = "IT";
         }
 
         private void MyLocalPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -52,7 +53,6 @@ namespace ControlX.Models
 
             }
         }
-
 
         public string QrCodeRegistrazione { get; set; }
         public DateTime? QrCodeScadenza { get; set; }

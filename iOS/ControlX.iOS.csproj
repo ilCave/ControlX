@@ -38,14 +38,13 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Luca Cavedaghi (HVNLXV848Z)</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>VS: com.Cualeva.ControlX Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
@@ -176,6 +175,7 @@
     <BundleResource Include="Resources\Logo_ControlX.png" />
     <BundleResource Include="Resources\search.png" />
     <BundleResource Include="Resources\Sfondo.png" />
+    <BundleResource Include="Resources\mail.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -214,6 +214,10 @@
       <Project>{D15BA81D-760F-4581-9BC5-B442C9D098AB}</Project>
       <Name>DocsMarshal.Orchestrator</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <Import Project="..\ControlX\ControlX.projitems" Label="Shared" Condition="Exists('..\ControlX\ControlX.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

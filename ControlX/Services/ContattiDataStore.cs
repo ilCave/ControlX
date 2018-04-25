@@ -45,28 +45,44 @@ namespace ControlX.Services
         }
 
 
+        internal override ProfileForUpdate FromEntityToProfileForUpdate(Models.Contatto model, bool raiseWorkflowEvents)
+        {
+            var update = model.ToProfileForUpdate(raiseWorkflowEvents);
+            AddFieldsToIProfileFor(update, model, raiseWorkflowEvents);
+            return update;
+        }
 
-        internal override ProfileForInsert FromEntityToProfileForInsert(Contatto model, bool raiseWorkflowEvents)
+
+        internal void AddFieldsToIProfileFor(IProfileFor profileFor, Models.Contatto model, bool raiseWorkflowEvent)
+        {
+            var locM = (Models.Contatto)model;
+            profileFor.Fields.Add(new FieldValueString("Nome", locM.Nome));
+            profileFor.Fields.Add(new FieldValueString("Telefono", locM.Telefono));
+            profileFor.Fields.Add(new FieldValueString("Email", locM.Email));
+            profileFor.Fields.Add(new FieldValueString("Cognome", locM.Cognome));
+            profileFor.Fields.Add(new FieldValueBoolean("OkPubblicita", locM.OkPubb));
+            profileFor.Fields.Add(new FieldValueBoolean("OkAlertOffTaglio", locM.OkAlertOffTaglio));
+            profileFor.Fields.Add(new FieldValueString("UserName", locM.UserName));
+            profileFor.Fields.Add(new FieldValueString("Cellulare", locM.Cellulare));
+            profileFor.Fields.Add(new FieldValueBoolean("OkInvioAvvisi", locM.OkInvioAvvisi));
+            profileFor.Fields.Add(new FieldValueString("QrCodeRegistrazione", locM.QrCodeRegistrazione));
+            profileFor.Fields.Add(new FieldValueDateTime("QrCodescadenza", locM.QrCodeScadenza, ""));
+            profileFor.Fields.Add(new FieldValueString("NotePubbliche", locM.NotePubbliche));
+            profileFor.Fields.Add(new FieldValueString("NotePrivate", locM.NotePrivate));
+            profileFor.Fields.Add(new FieldValueString("Sesso", locM.Sesso));
+            profileFor.Fields.Add(new FieldValueDateTime("dtnascita", locM.DataNascita, ""));
+            profileFor.Fields.Add(new FieldValueString("password", locM.Password));
+        }
+
+
+
+        internal override ProfileForInsert FromEntityToProfileForInsert(Models.Contatto model, bool raiseWorkflowEvents)
         {
             var insert = model.ToProfileForInsert(raiseWorkflowEvents);
-
-            insert.Fields.Add(new FieldValueString("Nome", model.Nome));
-            insert.Fields.Add(new FieldValueString("Telefono", model.Telefono));
-            insert.Fields.Add(new FieldValueString("Email", model.Email));
-            insert.Fields.Add(new FieldValueString("Cognome", model.Cognome));
-            insert.Fields.Add(new FieldValueBoolean("OkPubblicita", model.OkPubb));
-            insert.Fields.Add(new FieldValueBoolean("OkAlertOffTaglio", model.OkAlertOffTaglio));
-            insert.Fields.Add(new FieldValueString("UserName", model.UserName));
-            insert.Fields.Add(new FieldValueString("Cellulare", model.Cellulare));
-            insert.Fields.Add(new FieldValueBoolean("OkInvioAvvisi", model.OkInvioAvvisi));
-            insert.Fields.Add(new FieldValueString("QrCodeRegistrazione", model.QrCodeRegistrazione));
-            insert.Fields.Add(new FieldValueDateTime("QrCodescadenza", model.QrCodeScadenza,""));
-            insert.Fields.Add(new FieldValueString("NotePubbliche", model.NotePubbliche));
-            insert.Fields.Add(new FieldValueString("NotePrivate", model.NotePrivate));
-            insert.Fields.Add(new FieldValueString("Sesso", model.Sesso));
-            insert.Fields.Add(new FieldValueDateTime("dtnascita", model.DataNascita, ""));
-            insert.Fields.Add(new FieldValueString("password", model.Password));
+            AddFieldsToIProfileFor(insert,model, raiseWorkflowEvents);
             return insert;
         }
+
+
     }
 }

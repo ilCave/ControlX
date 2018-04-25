@@ -118,6 +118,7 @@ namespace ControlX.iOS.ControlRenders
             var entryEx = this.Element as CualevaRoundedEntry;
             if (string.IsNullOrWhiteSpace(entryEx.Image)) return;
             var locImage = UIImage.FromBundle(entryEx.Image);
+
             var downarrow = new UIImageView(locImage)
             {
                 // Indent it 10 pixels from the left.

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>{876EBEB1-9EE7-466A-87EE-E12F5E85353D}</ProjectGuid>
     <ReleaseVersion>0.2</ReleaseVersion>
+    <Description>Prenota il tuo taglio di capelli nel tuo negozio di fiducia!!</Description>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.Common.Default.props" />
