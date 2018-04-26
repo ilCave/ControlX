@@ -41,7 +41,13 @@ namespace ControlX.Resources
         public string strConferma { get { return GetCurvalueLang(_strConferma); } }
         public string StrAnnulla { get { return GetCurvalueLang(_strAnnulla); } }
         public string StrDelete { get { return GetCurvalueLang(_strDelete); } }
+        public string StrSalva { get { return GetCurvalueLang(_strSalva); } }
 
+        Dictionary<string, string> _strSalva = new Dictionary<string, string>
+        {
+            {"IT",  "Salva"},
+            {"EN",  "Save"}
+        };
         Dictionary<string, string> _strDelete = new Dictionary<string, string>
         {
             {"IT",  "Elimina cliente"},

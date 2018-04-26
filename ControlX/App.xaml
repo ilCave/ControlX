@@ -132,6 +132,12 @@
             <Style TargetType="ListView">
                 <Setter Property="BackgroundColor" Value="#FFFFFF" />
             </Style>
+            <Style x:Key="WhiteEntry" TargetType="CControls:CualevaRoundedEntry">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="MinimumHeightRequest" Value="40" />
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+                <Setter Property="CualevaRoundedEntryBackgroundColor" Value="#FFFFFF" />
+            </Style>
             <CControls:CualevaRoundedEntry x:Key="CualevaRoundedEntry" />
             <CualevaStandardConverters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
             <CualevaStandardConverters:UpperCaseConverter x:Key="UpperCaseConverter" />

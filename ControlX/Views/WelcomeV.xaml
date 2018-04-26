@@ -5,6 +5,7 @@
              xmlns:CControls="clr-namespace:ControlX.Controls"
              >
     <ContentPage.Content>
+        <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -25,5 +26,6 @@
             <ActivityIndicator Grid.Row="3" IsRunning="{Binding IsRunning}" Color="White" IsVisible="{Binding IsRunning}" />
             <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" Text="Powered by Cualeva srl with DocsMarshal engine"  Grid.Row="4" HorizontalOptions="Fill" VerticalOptions="End" Margin="10,10,10,30" />
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -48,6 +48,7 @@ namespace ControlX.Services
         internal override ProfileForUpdate FromEntityToProfileForUpdate(Models.Contatto model, bool raiseWorkflowEvents)
         {
             var update = model.ToProfileForUpdate(raiseWorkflowEvents);
+            update.ObjectId = model.Objectid;
             AddFieldsToIProfileFor(update, model, raiseWorkflowEvents);
             return update;
         }
