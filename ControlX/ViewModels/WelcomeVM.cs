@@ -25,6 +25,7 @@ namespace ControlX.ViewModels
                 if (ritorno != null)
                 {
                     await Navigation.PushAsync(new Views.ElencoContattiV());
+                    CurPage.Navigation.RemovePage(CurPage);
                 }
                 else
                     throw new Exception(ErrUsernameOrPasswordNotValid);

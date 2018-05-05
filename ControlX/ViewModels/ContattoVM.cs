@@ -104,6 +104,7 @@ namespace ControlX.ViewModels
                 {
                     // navigo nell'elenco dei contatti
                     CurPage.Navigation.PushAsync(new Views.ElencoContattiV());
+                    CurPage.Navigation.RemovePage(CurPage);
                     return;
                 }
             }
@@ -131,6 +132,7 @@ namespace ControlX.ViewModels
                 {
                     // navigo nell'elenco dei contatti
                     CurPage.Navigation.PushAsync(new Views.ElencoContattiV());
+                    CurPage.Navigation.RemovePage(CurPage);
                     return;
                 }
             }

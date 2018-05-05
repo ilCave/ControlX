@@ -128,8 +128,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_40.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_60.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_58.png" />
@@ -154,6 +155,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_128.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_256.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\tab_about.png" />
@@ -197,6 +199,7 @@
     <Folder Include="Persistence\" />
     <Folder Include="Resources\fonts\" />
     <Folder Include="ControlRenders\" />
+    <Folder Include="Assets.xcassets\AppIcon.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Cualeva\DocsMarshal.git\DOCSMarshal.Entities\DocsMarshal.Entities.csproj">
