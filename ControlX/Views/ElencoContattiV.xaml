@@ -11,10 +11,12 @@
             <ListView SelectedItem="{Binding SelectedItem}" IsRefreshing="{Binding IsRunning}"  x:Name="ElencoContattiList" ItemsSource="{Binding Items}" IsPullToRefreshEnabled="true" RefreshAllowed="true" RefreshCommand="{Binding ForceRefreshCommand}" >
             <ListView.Header>
                     <StackLayout BackgroundColor="{StaticResource Primary}" >
-                            <CControls:CualevaRoundedEntry Margin="5" CualevaRoundedEntryBackgroundColor="White" PlaceholderColor="Red" HeightRequest="50"  
-                                               VerticalOptions="Center" Style="{StaticResource cerca}" 
-                                           Grid.Row="1"  TextColor="{StaticResource Primary}"   
-                                           Placeholder="{Binding StrCercaContatto}" Text="{Binding Filtro}"  />                   
+                            <CControls:CualevaRoundedEntry Image="Cerca.png" Margin="5" 
+                                                            CualevaRoundedEntryBackgroundColor="White" 
+                                                            PlaceholderColor="Red" HeightRequest="50"  
+                                                            VerticalOptions="Center" Style="{StaticResource cerca}" 
+                                                            Grid.Row="1"  TextColor="{StaticResource Primary}"   
+                                                            Placeholder="{Binding StrCercaContatto}" Text="{Binding Filtro}"  />                   
                     </StackLayout>
                 
             </ListView.Header>

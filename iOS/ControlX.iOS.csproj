@@ -129,7 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_40.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_60.png" />
@@ -138,12 +137,10 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_80.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_120.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_180.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_20.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_29.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_76.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_152.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_167.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_1024.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_48.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_55.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_88.png" />
@@ -153,9 +150,10 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_32.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_64.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_128.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_1024.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_512.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ICONA_20.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\tab_about.png" />
@@ -170,15 +168,13 @@
     <BundleResource Include="Resources\fonts\Montserrat-Bold.ttf" />
     <BundleResource Include="Resources\fonts\Montserrat-Medium.ttf" />
     <BundleResource Include="Resources\fonts\Montserrat-Regular.ttf" />
-    <BundleResource Include="Resources\UserName.png" />
     <BundleResource Include="Resources\Password.png" />
     <BundleResource Include="Resources\Logo.png" />
-    <BundleResource Include="Resources\Cerca.png" />
     <BundleResource Include="Resources\contatti_30.png" />
     <BundleResource Include="Resources\Logo_ControlX.png" />
-    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\Cerca.png" />
     <BundleResource Include="Resources\Sfondo.png" />
-    <BundleResource Include="Resources\mail.png" />
+    <BundleResource Include="Resources\UserName.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -200,6 +196,7 @@
     <Folder Include="Resources\fonts\" />
     <Folder Include="ControlRenders\" />
     <Folder Include="Assets.xcassets\AppIcon.imageset\" />
+    <Folder Include="Assets.xcassets\AppIcon.appiconset\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Cualeva\DocsMarshal.git\DOCSMarshal.Entities\DocsMarshal.Entities.csproj">
