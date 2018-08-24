@@ -113,11 +113,11 @@ namespace ControlX.Services
         public async System.Threading.Tasks.Task<T> GetItemAsync(Guid objectId)
         {
             var profilo = await Manager.Profile.Search.ById(objectId);
-            var rit = profilo.GetResultAsProfiles();
-            if (rit.Count == 0)
+
+            if (profilo == null)
                 return default(T);
             else
-                return Filler(rit.First());
+                return Filler(profilo);
         }
 
         public virtual async Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false)
