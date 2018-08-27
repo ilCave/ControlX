@@ -22,7 +22,7 @@
                                            BackgroundColor="Transparent"  
                                            Style="{StaticResource psw}"  HeightRequest="50" CualevaRoundedEntryBackgroundColor="#FFFFFF"   x:Name="Password" 
                                            Placeholder="{Binding StrPassword}" IsPassword="true" Text="{Binding Password}" />
-            <Button IsVisible="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" Text="{Binding StrAccedi}" HorizontalOptions="Center" Grid.Row="3" Command="{Binding LoginCommand}" />
+            <Button BackgroundColor="White" IsVisible="{Binding IsRunning, Converter={StaticResource InverseBooleanConverter}}" Text="{Binding StrAccedi}" HorizontalOptions="Center" Grid.Row="3" Command="{Binding LoginCommand}" />
             <ActivityIndicator Grid.Row="3" IsRunning="{Binding IsRunning}" Color="White" IsVisible="{Binding IsRunning}" />
             <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" Text="Powered by Cualeva srl with DocsMarshal engine"  Grid.Row="4" HorizontalOptions="Fill" VerticalOptions="End" Margin="10,10,10,30" />
         </Grid>

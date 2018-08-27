@@ -3,6 +3,8 @@ using System.Drawing;
 using ControlX.Controls;
 using ControlX.iOS.ControlRenders;
 using CoreGraphics;
+using CoreText;
+using ObjCRuntime;
 
 using UIKit;
 using Xamarin.Forms;
@@ -23,8 +25,13 @@ namespace ControlX.iOS.ControlRenders
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
-            if (e.OldElement != null || Element == null)
+            if (e.OldElement != null || Element == null || Control == null)
                 return;
+            var nativeTextField = (UITextField)Control;    
+            nativeTextField.EditingDidBegin += (object sender, EventArgs eIos) =>
+            {
+               nativeTextField.PerformSelector(new Selector("selectAll"), null, 0.0f);
+            };   
             Control.BorderStyle = UITextBorderStyle.None;
             UpdateBorderWidth();
             UpdateBorderColor();

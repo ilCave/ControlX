@@ -74,7 +74,9 @@ namespace ControlX.ViewModels
             set
             {
                 if (value != null)
+                {
                     Navigation.PushAsync(new Views.ContattoV(value));
+                }
             }
         }
 

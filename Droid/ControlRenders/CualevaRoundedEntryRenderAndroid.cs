@@ -39,6 +39,7 @@ namespace ControlX.Droid.ControlRenders
             UpdatePadding(entryEx);
             UpdateTextAlighnment(entryEx);
             var editText = this.Control;
+            nativeEditText.SetSelectAllOnFocus (true); 
             if (!string.IsNullOrEmpty(entryEx.Image))
             {
                 editText.SetCompoundDrawablesWithIntrinsicBounds(GetDrawable(entryEx.Image), null, null, null);

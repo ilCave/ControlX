@@ -14,6 +14,13 @@ namespace ControlX.Views
             InitializeComponent();
             viewModel = new ViewModels.ElencoContattiVM(this, this.Navigation);
             BindingContext = viewModel;
+
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ElencoContattiList.SelectedItem = null;
         }
 
         public void OnEndRefresh()

@@ -46,7 +46,24 @@
                 <Setter Property="BackgroundColor" Value="#FFFFFF" />
                 <Setter Property="HeightRequest" Value="45" />
             </Style>
-        
+
+             <Style x:Key="email" TargetType="CControls:CualevaRoundedEntry">
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Image" Value="UserName" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="PlaceholderColor" Value="#ff9999" />
+                
+                <Setter Property="BackgroundColor" Value="#FFFFFF" />
+            </Style>
+
+              <Style x:Key="psw" TargetType="CControls:CualevaRoundedEntry"> 
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Image" Value="Password" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#FFFFFF" />
+                <Setter Property="PlaceholderColor" Value="#ff9999" />
+            </Style>
+
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
                 <Setter Property="Margin" Value="5" />
@@ -104,21 +121,8 @@
                 <Setter Property="CualevaRoundedEntryBackgroundColor" Value="White" />
                 <Setter Property="LeftPadding" Value="5" />
             </Style>
-            <Style x:Key="email" TargetType="CControls:CualevaRoundedEntry">
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="Image" Value="UserName" />
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="PlaceholderColor" Value="#ff9999" />
-                
-                <Setter Property="BackgroundColor" Value="#FFFFFF" />
-            </Style>
-            <Style x:Key="psw" TargetType="CControls:CualevaRoundedEntry"> 
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="Image" Value="Password" />
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="BackgroundColor" Value="#FFFFFF" />
-                <Setter Property="PlaceholderColor" Value="#ff9999" />
-            </Style>
+           
+          
             <Style  TargetType="Button">
                 <Setter Property="TextColor" Value="{StaticResource Primary}" />
                 <Setter Property="WidthRequest" Value="100" />
@@ -138,6 +142,8 @@
                 <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
                 <Setter Property="CualevaRoundedEntryBackgroundColor" Value="#FFFFFF" />
             </Style>
+            
+
             <CControls:CualevaRoundedEntry x:Key="CualevaRoundedEntry" />
             <CualevaStandardConverters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
             <CualevaStandardConverters:UpperCaseConverter x:Key="UpperCaseConverter" />
